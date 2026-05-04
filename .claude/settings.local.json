@@ -6,7 +6,8 @@
       "Bash(cp \"C:/Users/villx/Downloads/10 SKILLS ADRI Y JUANPE/10 SKILLS ADRI Y JUANPE/kit-dashboard-facturas/.claude/skills/04-dashboard-facturas.md\" ~/.claude/commands/)",
       "Bash(cp \"C:/Users/villx/Downloads/10 SKILLS ADRI Y JUANPE/10 SKILLS ADRI Y JUANPE/kit-extension-chrome/.claude/skills/09-extension-chrome.md\" ~/.claude/commands/)",
       "Bash(cp \"C:/Users/villx/Downloads/10 SKILLS ADRI Y JUANPE/10 SKILLS ADRI Y JUANPE/kit-instagram-web/.claude/skills/02-instagram-a-web.md\" ~/.claude/commands/)",
-      "Bash(cp \"C:/Users/villx/Downloads/10 SKILLS ADRI Y JUANPE/10 SKILLS ADRI Y JUANPE/kit-web-scrolling/.claude/skills/01-web-scrolling.md\" ~/.claude/commands/)"
+      "Bash(cp \"C:/Users/villx/Downloads/10 SKILLS ADRI Y JUANPE/10 SKILLS ADRI Y JUANPE/kit-web-scrolling/.claude/skills/01-web-scrolling.md\" ~/.claude/commands/)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\villx\\\\documents\\\\Webs Portfolio\\\\Portfolio\" -Recurse -Force | Where-Object { -not $_.PSIsContainer } | Select-Object -ExpandProperty FullName | Sort-Object)"
     ]
   }
 }
