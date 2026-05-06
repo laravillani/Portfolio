@@ -309,6 +309,25 @@
       transition: transform .45s ease;
     }
     .proj-card:hover .proj-img { transform: scale(1.04); }
+    .badge-wip {
+      position: absolute; top: 12px; left: 12px; z-index: 2;
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 10px; border-radius: 20px;
+      background: #1e1e2e;
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: .72rem; font-weight: 500; letter-spacing: .03em;
+      color: rgba(255,255,255,0.85);
+    }
+    .badge-wip::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: #f59e0b;
+      box-shadow: 0 0 0 0 rgba(245,158,11,.6);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100% { box-shadow: 0 0 0 0 rgba(245,158,11,.5); }
+      50%      { box-shadow: 0 0 0 5px rgba(245,158,11,0); }
+    }
 
     .proj-body { padding: 1.8rem 2rem; }
 
@@ -1243,7 +1262,7 @@
       <!-- NuevoPack -->
       <article class="proj-card reveal delay-1">
         <div class="proj-img-wrap">
-          <img src="img/mockup-nuevopack.png" alt="Captura del sitio de Gráfica NuevoPack" class="proj-img" />
+          <img src="img/mockup-nuevopack.png" alt="Mockup del sitio de Gráfica NuevoPack" class="proj-img" />
         </div>
 
         <div class="proj-body">
@@ -1272,7 +1291,8 @@
       <!-- Nails by Nanu -->
       <article class="proj-card reveal delay-2">
         <div class="proj-img-wrap">
-          <img src="img/mockup-nails-by-nanu.png" alt="Captura del sitio de Nails by Nanu" class="proj-img" />
+          <img src="img/mockup-nails-by-nanu.png" alt="Mockup del sitio de Nails by Nanu" class="proj-img" />
+          <span class="badge-wip">En progreso</span>
         </div>
 
         <div class="proj-body">
