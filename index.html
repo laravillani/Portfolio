@@ -1227,11 +1227,11 @@
         <div class="stat-lbl" data-i18n="hero.stat1">Negocios digitalizados</div>
       </div>
       <div>
-        <div class="stat-val">1 a 1</div>
+        <div class="stat-val" data-i18n="hero.stat2.val">1 a 1</div>
         <div class="stat-lbl" data-i18n="hero.stat2">Atención directa</div>
       </div>
       <div>
-        <div class="stat-val">+30 días</div>
+        <div class="stat-val" data-i18n="hero.stat3.val">+30 días</div>
         <div class="stat-lbl" data-i18n="hero.stat3">Soporte post-entrega</div>
       </div>
     </div>
@@ -1259,7 +1259,7 @@
         </div>
         <div class="proj-info">
           <div class="proj-name">Gráfica NuevoPack</div>
-          <div class="proj-rubro">Gráfica & Packaging</div>
+          <div class="proj-rubro" data-i18n="proj.rubro.nuevopack">Gráfica & Packaging</div>
           <div class="proj-footer">
             <span class="proj-type">Landing page</span>
             <a href="https://imprentanuevopack.online/" target="_blank" class="btn-site">
@@ -1278,7 +1278,7 @@
         </div>
         <div class="proj-info">
           <div class="proj-name">Nails by Nanu</div>
-          <div class="proj-rubro">Manicuría & Nail Art</div>
+          <div class="proj-rubro" data-i18n="proj.rubro.nanu">Manicuría & Nail Art</div>
           <div class="proj-footer">
             <span class="proj-type">Landing page</span>
             <a href="https://laravillani.github.io/nails-by-nanu" target="_blank" class="btn-site">
@@ -1296,7 +1296,7 @@
         </div>
         <div class="proj-info">
           <div class="proj-name">Antipasto Cocina</div>
-          <div class="proj-rubro">Gastronomía</div>
+          <div class="proj-rubro" data-i18n="proj.rubro.antipasto">Gastronomía</div>
           <div class="proj-footer">
             <span class="proj-type">Landing page</span>
             <a href="https://laravillani.github.io/antipasto-comida" target="_blank" class="btn-site">
@@ -1523,7 +1523,7 @@
 
       <div class="inv-price-side">
         <div class="inv-from" data-i18n="inv.from">desde</div>
-        <div class="inv-price-val">$160.000</div>
+        <div class="inv-price-val" data-i18n="inv.price">$160.000</div>
         <div class="inv-currency" data-i18n="inv.currency">ARS · pago único</div>
         <p class="inv-sub" data-i18n="inv.price.sub">El precio final varía según las funcionalidades y la complejidad del proyecto.</p>
       </div>
@@ -1544,15 +1544,15 @@
         <div>
           <div class="inv-block-title" data-i18n="inv.extras.title">Podés sumar según tu negocio</div>
           <div class="inv-tags">
-            <span class="inv-tag">Más páginas</span>
-            <span class="inv-tag">Blog</span>
-            <span class="inv-tag">Chatbot</span>
-            <span class="inv-tag">Reservas y turnos</span>
-            <span class="inv-tag">Cotizador online</span>
-            <span class="inv-tag">Tienda online</span>
-            <span class="inv-tag">Bilingüe</span>
-            <span class="inv-tag">Animaciones avanzadas</span>
-            <span class="inv-tag">FAQ inteligente</span>
+            <span class="inv-tag" data-i18n="inv.tag.pages">Más páginas</span>
+            <span class="inv-tag" data-i18n="inv.tag.blog">Blog</span>
+            <span class="inv-tag" data-i18n="inv.tag.chatbot">Chatbot</span>
+            <span class="inv-tag" data-i18n="inv.tag.reservas">Reservas y turnos</span>
+            <span class="inv-tag" data-i18n="inv.tag.cotizador">Cotizador online</span>
+            <span class="inv-tag" data-i18n="inv.tag.tienda">Tienda online</span>
+            <span class="inv-tag" data-i18n="inv.tag.bilingual">Bilingüe</span>
+            <span class="inv-tag" data-i18n="inv.tag.animations">Animaciones avanzadas</span>
+            <span class="inv-tag" data-i18n="inv.tag.faq">FAQ inteligente</span>
           </div>
         </div>
 
@@ -1589,7 +1589,7 @@
         <div class="price-desc" data-i18n="mant.plan.desc">Para mantener tu sitio actualizado y sin problemas, mes a mes.</div>
         <div class="price-amount">
           <span class="price-from" data-i18n="mant.from">desde</span>
-          <span class="price-val gradient">$25.000</span>
+          <span class="price-val gradient" data-i18n="mant.price">$25.000</span>
           <span class="price-period" data-i18n="mant.period">/mes</span>
         </div>
         <ul class="price-features">
@@ -1626,7 +1626,7 @@
         <div class="about-chips">
           <span class="chip">HTML &amp; CSS</span>
           <span class="chip">JavaScript</span>
-          <span class="chip">Diseño UI</span>
+          <span class="chip" data-i18n="about.chip.ui">Diseño UI</span>
           <span class="chip">Responsive</span>
           <span class="chip">Landing Pages</span>
           <span class="chip">Deploy</span>
@@ -1730,7 +1730,7 @@
             <div class="form-field">
               <label class="form-label" for="cf-email" data-i18n="contact.email.label">Email</label>
               <input class="form-input" type="email" id="cf-email" name="email"
-                     placeholder="tu@email.com" required autocomplete="email" />
+                     placeholder="tu@email.com" data-i18n-placeholder="contact.email.placeholder" required autocomplete="email" />
             </div>
           </div>
 
@@ -1825,7 +1825,9 @@
       'hero.sub':'Diseño sitios web a medida para emprendedores que quieren crecer <strong>sin depender del algoritmo de Instagram</strong>.<br>Tu negocio visible las 24 hs. <strong>Sin tecnicismos. Sin vueltas.</strong>',
       'hero.btn1':'Quiero mi sitio web','hero.btn2':'Ver trabajos',
       'hero.stat1':'Negocios digitalizados','hero.stat2':'Atención directa','hero.stat3':'Soporte post-entrega',
+      'hero.stat2.val':'1 a 1','hero.stat3.val':'+30 días',
       'proj.label':'Portfolio','proj.title':'Mis trabajos','proj.sub':'Proyectos reales de negocios que ya cuentan con presencia digital profesional.','proj.wip':'En progreso','proj.visit':'Ver sitio',
+      'proj.rubro.nuevopack':'Gráfica & Packaging','proj.rubro.nanu':'Manicuría & Nail Art','proj.rubro.antipasto':'Gastronomía',
       'tipos.label':'Soluciones web','tipos.title':'¿Qué tipo de sitio necesitás?','tipos.sub':'Desde una página simple hasta funcionalidades avanzadas. Si lo imaginás, lo construimos.',
       'tipos.landing.name':'Landing Page','tipos.landing.desc':'Una sola página enfocada en convertir visitantes en clientes. Ideal para emprendedores que arrancan.',
       'tipos.complete.name':'Sitio Web Completo','tipos.complete.desc':'Múltiples páginas y secciones para negocios que necesitan mostrar más: servicios, equipo, galería, blog.',
@@ -1851,14 +1853,16 @@
       'proc.4.title':'Publicación y entrega','proc.4.desc':'Tu sitio queda online. Te explico cómo funciona y arranca el soporte post-entrega incluido.',
       'ctamid.label':'¿Empezamos?','ctamid.title':'Cada día sin web es un cliente<br>que <span class="grad-text">no te encuentra</span>','ctamid.sub':'Tu sitio puede estar online antes de lo que pensás. El proceso es simple, los resultados son reales.','ctamid.btn1':'Quiero mi sitio web','ctamid.btn2':'Ver precios',
       'inv.label':'Inversión','inv.title':'¿Cuánto cuesta?','inv.sub':'Sin letra chica ni sorpresas. El precio depende de lo que necesita tu negocio.',
-      'inv.from':'desde','inv.currency':'ARS · pago único','inv.price.sub':'El precio final varía según las funcionalidades y la complejidad del proyecto.',
+      'inv.from':'desde','inv.price':'$160.000','inv.currency':'ARS · pago único','inv.price.sub':'El precio final varía según las funcionalidades y la complejidad del proyecto.',
       'inv.included.title':'Siempre incluido','inv.included.1':'Diseño a medida para tu negocio','inv.included.2':'100% responsive (celular, tablet y PC)','inv.included.3':'Formulario de contacto integrado','inv.included.4':'Sitio publicado y listo para usar','inv.included.5':'+30 días de soporte post-entrega',
-      'inv.extras.title':'Podés sumar según tu negocio','inv.cta.text':'Contame tu proyecto y te mando un presupuesto sin compromiso.','inv.cta.btn':'Pedir presupuesto',
+      'inv.extras.title':'Podés sumar según tu negocio',
+      'inv.tag.pages':'Más páginas','inv.tag.blog':'Blog','inv.tag.chatbot':'Chatbot','inv.tag.reservas':'Reservas y turnos','inv.tag.cotizador':'Cotizador online','inv.tag.tienda':'Tienda online','inv.tag.bilingual':'Bilingüe','inv.tag.animations':'Animaciones avanzadas','inv.tag.faq':'FAQ inteligente',
+      'inv.cta.text':'Contame tu proyecto y te mando un presupuesto sin compromiso.','inv.cta.btn':'Pedir presupuesto',
       'mant.label':'Planes mensuales','mant.title':'Tu web siempre en buenas manos','mant.sub':'Una vez que tu sitio está online, podés sumar un plan mensual para que siga funcionando perfecto sin que tengas que ocuparte de nada.',
       'mant.badge':'Mantenimiento','mant.plan.name':'Plan Esencial','mant.plan.desc':'Para mantener tu sitio actualizado y sin problemas, mes a mes.',
-      'mant.from':'desde','mant.period':'/mes','mant.feat.1':'Actualizaciones de contenido (textos, fotos, precios)','mant.feat.2':'Soporte ante consultas o problemas','mant.feat.3':'Revisión mensual de funcionamiento','mant.btn':'Consultame',
+      'mant.from':'desde','mant.price':'$25.000','mant.period':'/mes','mant.feat.1':'Actualizaciones de contenido (textos, fotos, precios)','mant.feat.2':'Soporte ante consultas o problemas','mant.feat.3':'Revisión mensual de funcionamiento','mant.btn':'Consultame',
       'mant.note':'Los planes de mantenimiento se contratan <strong>después del desarrollo del sitio</strong>.<br>Podés empezar, pausar o cancelar cuando quieras, sin permanencia mínima.',
-      'about.label':'Sobre mí','about.role':'Desarrolladora Web','about.title':'Hola, soy Lara',
+      'about.label':'Sobre mí','about.role':'Desarrolladora Web','about.chip.ui':'Diseño UI','about.title':'Hola, soy Lara',
       'about.p1':'Ayudo a emprendedores a <strong>dejar de perder clientes</strong> por no tener presencia online. Diseño sitios web a medida que muestran tu negocio de forma profesional y generan confianza desde el primer clic.',
       'about.p2':'No necesitás entender de tecnología. Yo me encargo de todo: te explico cada paso en términos simples, incorporo tus devoluciones y <strong>no entrego hasta que estés conforme</strong>.',
       'about.p3':'Cada proyecto es distinto y lo trato así. Nada de plantillas genéricas — tu sitio va a reflejar exactamente lo que hace <strong>único a tu negocio</strong>.',
@@ -1868,7 +1872,7 @@
       'tips.2.title':'Tus clientes te buscan en Google antes de escribirte','tips.2.body':'La mayoría de las personas <strong>investiga online antes de contratar</strong>. Si no aparecés en esa búsqueda, directamente no existís para ese cliente potencial.',
       'tips.3.title':'Tu cuenta de Instagram no te pertenece','tips.3.body':'Instagram puede cambiar el algoritmo, restringir tu alcance o suspender tu cuenta. <strong>Tu web es tuya para siempre</strong>, sin depender de ninguna red social.',
       'contact.label':'Contacto','contact.title':'Tu negocio es demasiado bueno<br>como para que nadie lo encuentre<span class="grad-text2"> en internet</span>','contact.sub':'Escribime hoy y en poco tiempo tenés tu sitio web listo. Sin vueltas, sin tecnicismos, con resultados.',
-      'contact.form.title':'Enviame un mensaje','contact.name.label':'Nombre','contact.name.placeholder':'Tu nombre','contact.email.label':'Email','contact.msg.label':'Mensaje','contact.msg.placeholder':'Contame un poco sobre tu negocio y qué necesitás...','contact.submit':'Enviar consulta','contact.direct':'O contactame directo',
+      'contact.form.title':'Enviame un mensaje','contact.name.label':'Nombre','contact.name.placeholder':'Tu nombre','contact.email.label':'Email','contact.email.placeholder':'tu@email.com','contact.msg.label':'Mensaje','contact.msg.placeholder':'Contame un poco sobre tu negocio y qué necesitás...','contact.submit':'Enviar consulta','contact.direct':'O contactame directo',
       'fab.label':'¡Hablemos!',
       'footer.text':'© 2026 <strong>Lara Villani</strong> · Webs profesionales para negocios que quieren estar online',
       'form.sending':'Enviando…','form.sent':'✓ ¡Mensaje enviado! Te respondo a la brevedad.','form.err.name':'Ingresá tu nombre (mínimo 2 caracteres)','form.err.email':'Ingresá un email válido','form.err.msg':'El mensaje debe tener al menos 10 caracteres',
@@ -1880,8 +1884,10 @@
       'hero.sub':'I design custom websites for entrepreneurs who want to grow <strong>without depending on Instagram\'s algorithm</strong>.<br>Your business visible 24/7. <strong>No jargon. No hassle.</strong>',
       'hero.btn1':'I want my website','hero.btn2':'See my work',
       'hero.stat1':'Businesses online','hero.stat2':'Direct attention','hero.stat3':'Post-launch support',
+      'hero.stat2.val':'1 on 1','hero.stat3.val':'+30 days',
       'proj.label':'Portfolio','proj.title':'My work','proj.sub':'Real business projects that already have a professional digital presence.','proj.wip':'In progress','proj.visit':'Visit site',
-      'tipos.label':'Web solutions','tipos.title':'What type of site do you need?','tipos.sub':'From a simple page to advanced features. If you can imagine it, we can build it.',
+      'proj.rubro.nuevopack':'Graphics & Packaging','proj.rubro.nanu':'Nail Art & Manicure','proj.rubro.antipasto':'Gastronomy',
+      'tipos.label':'Web solutions','tipos.title':'What type of site do you need?','tipos.sub':'From a simple page to advanced features. If you can imagine it, I can build it.',
       'tipos.landing.name':'Landing Page','tipos.landing.desc':'A single page focused on converting visitors into clients. Ideal for entrepreneurs just starting out.',
       'tipos.complete.name':'Full Website','tipos.complete.desc':'Multiple pages and sections for businesses that need to show more: services, team, gallery, blog.',
       'tipos.catalog.name':'Product Catalogue','tipos.catalog.desc':'Showcase your products with photos, descriptions and prices in an organised, professional way — no online store needed.',
@@ -1891,29 +1897,31 @@
       'tipos.bilingual.name':'Bilingual Site','tipos.bilingual.desc':'Your website in Spanish and English to reach more markets. Ideal if you have international clients or suppliers.',
       'tipos.shop.name':'Online Shop','tipos.shop.desc':'Sell your products directly from your site, with cart, payments and stock management built in.',
       'tipos.portfolio.name':'Visual Portfolio','tipos.portfolio.desc':'A gallery for photographers, designers, artists and creatives who need to show their work.',
-      'tipos.cta.text':'Can\'t find what you\'re looking for? We can build something completely custom.','tipos.cta.btn':'Tell me about your project',
+      'tipos.cta.text':'Can\'t find what you\'re looking for? I can build something completely custom.','tipos.cta.btn':'Tell me about your project',
       'svc.label':'Services','svc.title':'What do I offer?','svc.sub':'Everything you need to have a professional digital presence, fast and without complications.',
       'svc.1.name':'Custom design','svc.1.desc':'Your site reflects your brand identity. Nothing generic, no copied templates.',
       'svc.2.name':'100% responsive','svc.2.desc':'Looks perfect on mobile, tablet and desktop. Because your clients browse from everywhere.',
       'svc.3.name':'Fast and optimised','svc.3.desc':'Sites that load quickly and perform well. Visitors don\'t wait, and Google rewards it.',
-      'svc.4.name':'Deployed and ready','svc.4.desc':'I handle publishing the site. When we\'re done, it\'s live and accessible to everyone.',
+      'svc.4.name':'Deployed and ready','svc.4.desc':'I handle publishing the site. When it\'s done, it\'s live and accessible to everyone.',
       'svc.5.name':'Clear communication','svc.5.desc':'I work with you, not just for you. I explain everything without jargon throughout the process.',
       'svc.6.name':'Post-launch support','svc.6.desc':'Need a change after launch? I\'m available to help you.',
       'proc.label':'How I work','proc.title':'From first message to live site','proc.sub':'A clear, guided process so you know exactly what to expect at each stage.',
-      'proc.1.title':'Initial consultation','proc.1.desc':'We talk about your business, your goals and what you need. No commitment, no jargon.',
+      'proc.1.title':'Initial consultation','proc.1.desc':'I\'ll learn about your business, your goals and what you need. No commitment, no jargon.',
       'proc.2.title':'Proposal and design','proc.2.desc':'I present a visual proposal tailored to your brand so you can see how it\'ll look before we start.',
       'proc.3.title':'Development and revisions','proc.3.desc':'I build the site and incorporate your feedback until it looks exactly how you imagined.',
       'proc.4.title':'Launch and delivery','proc.4.desc':'Your site goes live. I explain how everything works and post-launch support kicks in.',
       'ctamid.label':'Ready to start?','ctamid.title':'Every day without a website is a client<br>who <span class="grad-text">can\'t find you</span>','ctamid.sub':'Your site can be online sooner than you think. The process is simple, the results are real.','ctamid.btn1':'I want my website','ctamid.btn2':'See pricing',
       'inv.label':'Investment','inv.title':'How much does it cost?','inv.sub':'No fine print, no surprises. The price depends on what your business needs.',
-      'inv.from':'from','inv.currency':'ARS · one-time payment','inv.price.sub':'The final price varies depending on the features and complexity of the project.',
+      'inv.from':'from','inv.price':'$150','inv.currency':'USD · one-time payment','inv.price.sub':'The final price varies depending on the features and complexity of the project.',
       'inv.included.title':'Always included','inv.included.1':'Custom design for your business','inv.included.2':'100% responsive (mobile, tablet and PC)','inv.included.3':'Integrated contact form','inv.included.4':'Site published and ready to use','inv.included.5':'+30 days of post-launch support',
-      'inv.extras.title':'Add-ons for your business','inv.cta.text':'Tell me about your project and I\'ll send you a no-commitment quote.','inv.cta.btn':'Request a quote',
+      'inv.extras.title':'Add-ons for your business',
+      'inv.tag.pages':'More pages','inv.tag.blog':'Blog','inv.tag.chatbot':'Chatbot','inv.tag.reservas':'Bookings & appointments','inv.tag.cotizador':'Online quote tool','inv.tag.tienda':'Online shop','inv.tag.bilingual':'Bilingual','inv.tag.animations':'Advanced animations','inv.tag.faq':'Smart FAQ',
+      'inv.cta.text':'Tell me about your project and I\'ll send you a no-commitment quote.','inv.cta.btn':'Request a quote',
       'mant.label':'Monthly plans','mant.title':'Your website always in good hands','mant.sub':'Once your site is live, you can add a monthly plan so it keeps running perfectly without you having to worry about anything.',
       'mant.badge':'Maintenance','mant.plan.name':'Essential Plan','mant.plan.desc':'To keep your site up to date and trouble-free, month after month.',
-      'mant.from':'from','mant.period':'/mo','mant.feat.1':'Content updates (text, photos, prices)','mant.feat.2':'Support for questions or issues','mant.feat.3':'Monthly performance check','mant.btn':'Contact me',
+      'mant.from':'from','mant.price':'$20','mant.period':'/mo','mant.feat.1':'Content updates (text, photos, prices)','mant.feat.2':'Support for questions or issues','mant.feat.3':'Monthly performance check','mant.btn':'Contact me',
       'mant.note':'Maintenance plans are hired <strong>after the site has been developed</strong>.<br>You can start, pause or cancel at any time — no minimum commitment.',
-      'about.label':'About me','about.role':'Web Developer','about.title':'Hi, I\'m Lara',
+      'about.label':'About me','about.role':'Web Developer','about.chip.ui':'UI Design','about.title':'Hi, I\'m Lara',
       'about.p1':'I help entrepreneurs <strong>stop losing clients</strong> due to having no online presence. I design custom websites that showcase your business professionally and build trust from the first click.',
       'about.p2':'You don\'t need to understand technology. I take care of everything: I explain each step in plain language, incorporate your feedback and <strong>won\'t deliver until you\'re happy</strong>.',
       'about.p3':'Every project is different and I treat it that way. No generic templates — your site will reflect exactly what makes <strong>your business unique</strong>.',
@@ -1923,7 +1931,7 @@
       'tips.2.title':'Your clients Google you before reaching out','tips.2.body':'Most people <strong>research online before hiring</strong>. If you don\'t appear in that search, you simply don\'t exist for that potential client.',
       'tips.3.title':'Your Instagram account doesn\'t belong to you','tips.3.body':'Instagram can change the algorithm, restrict your reach or suspend your account. <strong>Your website is yours forever</strong>, without depending on any social network.',
       'contact.label':'Contact','contact.title':'Your business is too good<br>for no one to find it<span class="grad-text2"> online</span>','contact.sub':'Message me today and your website will be ready sooner than you think. No hassle, no jargon, real results.',
-      'contact.form.title':'Send me a message','contact.name.label':'Name','contact.name.placeholder':'Your name','contact.email.label':'Email','contact.msg.label':'Message','contact.msg.placeholder':'Tell me a bit about your business and what you need...','contact.submit':'Send message','contact.direct':'Or contact me directly',
+      'contact.form.title':'Send me a message','contact.name.label':'Name','contact.name.placeholder':'Your name','contact.email.label':'Email','contact.email.placeholder':'your@email.com','contact.msg.label':'Message','contact.msg.placeholder':'Tell me a bit about your business and what you need...','contact.submit':'Send message','contact.direct':'Or contact me directly',
       'fab.label':'Let\'s talk!',
       'footer.text':'© 2026 <strong>Lara Villani</strong> · Professional websites for businesses that want to be online',
       'form.sending':'Sending…','form.sent':'✓ Message sent! I\'ll get back to you shortly.','form.err.name':'Enter your name (minimum 2 characters)','form.err.email':'Enter a valid email','form.err.msg':'Message must be at least 10 characters',
