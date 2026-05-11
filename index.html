@@ -150,6 +150,15 @@
     }
     .nav-cta:hover { box-shadow: 0 0 35px rgba(79,70,229,.55); transform: translateY(-1px); }
 
+    .lang-toggle {
+      background: none; border: 1px solid var(--border);
+      color: var(--muted); font-family: 'DM Sans', sans-serif;
+      font-size: .75rem; font-weight: 700; letter-spacing: .06em;
+      padding: .25rem .65rem; border-radius: 50px; cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+    .lang-toggle:hover { border-color: var(--indigo); color: var(--indigo); }
+
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
       background: none; border: none; cursor: pointer; padding: 4px;
@@ -1168,13 +1177,15 @@
   </div>
 
   <ul class="nav-links" id="navLinks">
-    <li><a href="#proyectos">Trabajos</a></li>
-    <li><a href="#tipos">Soluciones</a></li>
-    <li><a href="#inversion">Precios</a></li>
-    <li><a href="#mantenimiento">Planes</a></li>
-    <li><a href="#sobre-mi">Sobre mí</a></li>
-    <li><a href="#contacto" class="nav-contact">Contacto</a></li>
+    <li><a href="#proyectos" data-i18n="nav.works">Trabajos</a></li>
+    <li><a href="#tipos" data-i18n="nav.solutions">Soluciones</a></li>
+    <li><a href="#inversion" data-i18n="nav.pricing">Precios</a></li>
+    <li><a href="#mantenimiento" data-i18n="nav.plans">Planes</a></li>
+    <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+    <li><a href="#contacto" class="nav-contact" data-i18n="nav.contact">Contacto</a></li>
   </ul>
+
+  <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
 
   <button class="hamburger" id="burger" aria-label="Abrir menú" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -1189,14 +1200,14 @@
   <div class="glow glow-3"></div>
 
   <div class="hero-inner">
-    <div class="badge"><span class="badge-dot"></span>Disponible para nuevos proyectos</div>
+    <div class="badge"><span class="badge-dot"></span><span data-i18n="hero.badge">Disponible para nuevos proyectos</span></div>
 
-    <h1 class="hero-title">
+    <h1 class="hero-title" data-i18n-html="hero.title">
       Conseguí más clientes<br>
       con una web que <span class="grad-text">trabaja por vos</span>
     </h1>
 
-    <p class="hero-sub">
+    <p class="hero-sub" data-i18n-html="hero.sub">
       Diseño sitios web a medida para emprendedores que quieren crecer
       <strong>sin depender del algoritmo de Instagram</strong>.<br>
       Tu negocio visible las 24 hs. <strong>Sin tecnicismos. Sin vueltas.</strong>
@@ -1204,24 +1215,24 @@
 
     <div class="hero-btns">
       <a href="#contacto" class="btn-grad">
-        Quiero mi sitio web
+        <span data-i18n="hero.btn1">Quiero mi sitio web</span>
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#proyectos" class="btn-outline">Ver trabajos</a>
+      <a href="#proyectos" class="btn-outline" data-i18n="hero.btn2">Ver trabajos</a>
     </div>
 
     <div class="hero-stats">
       <div>
         <div class="stat-val">3+</div>
-        <div class="stat-lbl">Negocios digitalizados</div>
+        <div class="stat-lbl" data-i18n="hero.stat1">Negocios digitalizados</div>
       </div>
       <div>
         <div class="stat-val">1 a 1</div>
-        <div class="stat-lbl">Atención directa</div>
+        <div class="stat-lbl" data-i18n="hero.stat2">Atención directa</div>
       </div>
       <div>
         <div class="stat-val">+30 días</div>
-        <div class="stat-lbl">Soporte post-entrega</div>
+        <div class="stat-lbl" data-i18n="hero.stat3">Soporte post-entrega</div>
       </div>
     </div>
   </div>
@@ -1234,9 +1245,9 @@
 <section id="proyectos">
   <div class="container">
     <div class="reveal">
-      <div class="s-label">Portfolio</div>
-      <h2 class="s-title">Mis trabajos</h2>
-      <p class="s-sub">Proyectos reales de negocios que ya cuentan con presencia digital profesional.</p>
+      <div class="s-label" data-i18n="proj.label">Portfolio</div>
+      <h2 class="s-title" data-i18n="proj.title">Mis trabajos</h2>
+      <p class="s-sub" data-i18n="proj.sub">Proyectos reales de negocios que ya cuentan con presencia digital profesional.</p>
     </div>
 
     <div class="projects-grid">
@@ -1252,7 +1263,7 @@
           <div class="proj-footer">
             <span class="proj-type">Landing page</span>
             <a href="https://imprentanuevopack.online/" target="_blank" class="btn-site">
-              Ver sitio
+              <span data-i18n="proj.visit">Ver sitio</span>
               <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
             </a>
           </div>
@@ -1263,7 +1274,7 @@
       <article class="proj-item reveal delay-2">
         <div class="proj-img-wrap">
           <img src="img/mockup-nails-by-nanu.png" alt="Mockup del sitio de Nails by Nanu" class="proj-img">
-          <span class="badge-wip">En progreso</span>
+          <span class="badge-wip" data-i18n="proj.wip">En progreso</span>
         </div>
         <div class="proj-info">
           <div class="proj-name">Nails by Nanu</div>
@@ -1271,7 +1282,7 @@
           <div class="proj-footer">
             <span class="proj-type">Landing page</span>
             <a href="https://laravillani.github.io/nails-by-nanu" target="_blank" class="btn-site">
-              Ver sitio
+              <span data-i18n="proj.visit">Ver sitio</span>
               <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
             </a>
           </div>
@@ -1289,7 +1300,7 @@
           <div class="proj-footer">
             <span class="proj-type">Landing page</span>
             <a href="https://laravillani.github.io/antipasto-comida" target="_blank" class="btn-site">
-              Ver sitio
+              <span data-i18n="proj.visit">Ver sitio</span>
               <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
             </a>
           </div>
@@ -1307,64 +1318,64 @@
 <section id="tipos">
   <div class="container">
     <div class="reveal">
-      <div class="s-label">Soluciones web</div>
-      <h2 class="s-title">¿Qué tipo de sitio necesitás?</h2>
-      <p class="s-sub">Desde una página simple hasta funcionalidades avanzadas. Si lo imaginás, lo construimos.</p>
+      <div class="s-label" data-i18n="tipos.label">Soluciones web</div>
+      <h2 class="s-title" data-i18n="tipos.title">¿Qué tipo de sitio necesitás?</h2>
+      <p class="s-sub" data-i18n="tipos.sub">Desde una página simple hasta funcionalidades avanzadas. Si lo imaginás, lo construimos.</p>
     </div>
 
     <div class="tipos-grid">
 
       <div class="tipo-card reveal delay-1">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <div><div class="tipo-name">Landing Page</div><div class="tipo-desc">Una sola página enfocada en convertir visitantes en clientes. Ideal para emprendedores que arrancan.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.landing.name">Landing Page</div><div class="tipo-desc" data-i18n="tipos.landing.desc">Una sola página enfocada en convertir visitantes en clientes. Ideal para emprendedores que arrancan.</div></div>
       </div>
 
       <div class="tipo-card reveal delay-2">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-        <div><div class="tipo-name">Sitio Web Completo</div><div class="tipo-desc">Múltiples páginas y secciones para negocios que necesitan mostrar más: servicios, equipo, galería, blog.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.complete.name">Sitio Web Completo</div><div class="tipo-desc" data-i18n="tipos.complete.desc">Múltiples páginas y secciones para negocios que necesitan mostrar más: servicios, equipo, galería, blog.</div></div>
       </div>
 
       <div class="tipo-card reveal delay-3">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <div><div class="tipo-name">Catálogo de Productos</div><div class="tipo-desc">Mostrá tus productos con fotos, descripción y precios de forma ordenada y profesional, sin necesidad de una tienda online.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.catalog.name">Catálogo de Productos</div><div class="tipo-desc" data-i18n="tipos.catalog.desc">Mostrá tus productos con fotos, descripción y precios de forma ordenada y profesional, sin necesidad de una tienda online.</div></div>
       </div>
 
       <div class="tipo-card reveal delay-1">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></div>
-        <div><div class="tipo-name">Chatbot + FAQ Inteligente</div><div class="tipo-desc">Un asistente que responde preguntas de tus clientes automáticamente, las 24 hs, sin que intervengas.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.chatbot.name">Chatbot + FAQ Inteligente</div><div class="tipo-desc" data-i18n="tipos.chatbot.desc">Un asistente que responde preguntas de tus clientes automáticamente, las 24 hs, sin que intervengas.</div></div>
       </div>
 
       <div class="tipo-card reveal delay-2">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="12" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg></div>
-        <div><div class="tipo-name">Calculadora o Cotizador</div><div class="tipo-desc">Tu cliente ingresa sus datos y obtiene un presupuesto o cálculo al instante. Genera leads calificados.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.calc.name">Calculadora o Cotizador</div><div class="tipo-desc" data-i18n="tipos.calc.desc">Tu cliente ingresa sus datos y obtiene un presupuesto o cálculo al instante. Genera leads calificados.</div></div>
       </div>
 
       <div class="tipo-card reveal delay-3">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div>
-        <div><div class="tipo-name">Reservas y Turnos</div><div class="tipo-desc">Sistema de agenda online para que tus clientes reserven horarios solos, sin llamadas ni mensajes de ida y vuelta.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.reservas.name">Reservas y Turnos</div><div class="tipo-desc" data-i18n="tipos.reservas.desc">Sistema de agenda online para que tus clientes reserven horarios solos, sin llamadas ni mensajes de ida y vuelta.</div></div>
       </div>
 
       <div class="tipo-card reveal delay-1">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <div><div class="tipo-name">Sitio Bilingüe</div><div class="tipo-desc">Tu web en español e inglés para llegar a más mercados. Ideal si tenés clientes o proveedores internacionales.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.bilingual.name">Sitio Bilingüe</div><div class="tipo-desc" data-i18n="tipos.bilingual.desc">Tu web en español e inglés para llegar a más mercados. Ideal si tenés clientes o proveedores internacionales.</div></div>
       </div>
 
       <div class="tipo-card reveal delay-2">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <div><div class="tipo-name">Tienda Online</div><div class="tipo-desc">Vendé tus productos directamente desde tu sitio, con carrito, pagos y gestión de stock integrados.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.shop.name">Tienda Online</div><div class="tipo-desc" data-i18n="tipos.shop.desc">Vendé tus productos directamente desde tu sitio, con carrito, pagos y gestión de stock integrados.</div></div>
       </div>
 
       <div class="tipo-card reveal delay-3">
         <div class="tipo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-        <div><div class="tipo-name">Portfolio Visual</div><div class="tipo-desc">Galería de trabajos para fotógrafos, diseñadores, artistas y creativos que necesitan mostrar su obra.</div></div>
+        <div><div class="tipo-name" data-i18n="tipos.portfolio.name">Portfolio Visual</div><div class="tipo-desc" data-i18n="tipos.portfolio.desc">Galería de trabajos para fotógrafos, diseñadores, artistas y creativos que necesitan mostrar su obra.</div></div>
       </div>
 
     </div>
 
     <div class="tipos-cta reveal">
-      <p style="color:var(--muted); font-size:.95rem; margin-bottom:1.25rem;">¿No encontrás lo que buscás? Podemos hacer algo completamente a medida.</p>
+      <p style="color:var(--muted); font-size:.95rem; margin-bottom:1.25rem;" data-i18n="tipos.cta.text">¿No encontrás lo que buscás? Podemos hacer algo completamente a medida.</p>
       <a href="#contacto" class="btn-grad">
-        Consultame por tu proyecto
+        <span data-i18n="tipos.cta.btn">Consultame por tu proyecto</span>
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -1377,46 +1388,46 @@
 <section id="servicios">
   <div class="container">
     <div class="reveal">
-      <div class="s-label">Servicios</div>
-      <h2 class="s-title">¿Qué ofrezco?</h2>
-      <p class="s-sub">Todo lo que necesitás para tener presencia digital profesional, rápido y sin complicaciones.</p>
+      <div class="s-label" data-i18n="svc.label">Servicios</div>
+      <h2 class="s-title" data-i18n="svc.title">¿Qué ofrezco?</h2>
+      <p class="s-sub" data-i18n="svc.sub">Todo lo que necesitás para tener presencia digital profesional, rápido y sin complicaciones.</p>
     </div>
 
     <div class="services-grid">
       <article class="svc-card reveal delay-1">
         <div class="svc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l11.04 11.04"/><circle cx="11" cy="11" r="2"/></svg></div>
-        <div class="svc-name">Diseño a medida</div>
-        <div class="svc-desc">Tu sitio refleja la identidad de tu marca. Nada genérico, nada de plantillas copiadas.</div>
+        <div class="svc-name" data-i18n="svc.1.name">Diseño a medida</div>
+        <div class="svc-desc" data-i18n="svc.1.desc">Tu sitio refleja la identidad de tu marca. Nada genérico, nada de plantillas copiadas.</div>
       </article>
 
       <article class="svc-card reveal delay-2">
         <div class="svc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
-        <div class="svc-name">100% responsive</div>
-        <div class="svc-desc">Se ve perfecto en celular, tablet y computadora. Porque tus clientes navegan desde todos lados.</div>
+        <div class="svc-name" data-i18n="svc.2.name">100% responsive</div>
+        <div class="svc-desc" data-i18n="svc.2.desc">Se ve perfecto en celular, tablet y computadora. Porque tus clientes navegan desde todos lados.</div>
       </article>
 
       <article class="svc-card reveal delay-3">
         <div class="svc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <div class="svc-name">Rápido y optimizado</div>
-        <div class="svc-desc">Sitios que cargan rápido y funcionan bien. Los visitantes no esperan, y Google lo valora.</div>
+        <div class="svc-name" data-i18n="svc.3.name">Rápido y optimizado</div>
+        <div class="svc-desc" data-i18n="svc.3.desc">Sitios que cargan rápido y funcionan bien. Los visitantes no esperan, y Google lo valora.</div>
       </article>
 
       <article class="svc-card reveal delay-1">
         <div class="svc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <div class="svc-name">Desplegado y listo</div>
-        <div class="svc-desc">Me encargo de publicar el sitio. Cuando terminamos, ya está en vivo y accesible para todos.</div>
+        <div class="svc-name" data-i18n="svc.4.name">Desplegado y listo</div>
+        <div class="svc-desc" data-i18n="svc.4.desc">Me encargo de publicar el sitio. Cuando terminamos, ya está en vivo y accesible para todos.</div>
       </article>
 
       <article class="svc-card reveal delay-2">
         <div class="svc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <div class="svc-name">Comunicación clara</div>
-        <div class="svc-desc">Trabajo con vos, no para vos. Te explico todo sin tecnicismos durante todo el proceso.</div>
+        <div class="svc-name" data-i18n="svc.5.name">Comunicación clara</div>
+        <div class="svc-desc" data-i18n="svc.5.desc">Trabajo con vos, no para vos. Te explico todo sin tecnicismos durante todo el proceso.</div>
       </article>
 
       <article class="svc-card reveal delay-3">
         <div class="svc-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <div class="svc-name">Soporte post-entrega</div>
-        <div class="svc-desc">¿Necesitás un cambio después del lanzamiento? Estoy disponible para ayudarte.</div>
+        <div class="svc-name" data-i18n="svc.6.name">Soporte post-entrega</div>
+        <div class="svc-desc" data-i18n="svc.6.desc">¿Necesitás un cambio después del lanzamiento? Estoy disponible para ayudarte.</div>
       </article>
     </div>
   </div>
@@ -1429,9 +1440,9 @@
 <section id="proceso">
   <div class="container">
     <div class="reveal">
-      <div class="s-label">Cómo trabajo</div>
-      <h2 class="s-title">Del primer mensaje al sitio online</h2>
-      <p class="s-sub">Un proceso claro y acompañado para que sepas exactamente qué esperar en cada etapa.</p>
+      <div class="s-label" data-i18n="proc.label">Cómo trabajo</div>
+      <h2 class="s-title" data-i18n="proc.title">Del primer mensaje al sitio online</h2>
+      <p class="s-sub" data-i18n="proc.sub">Un proceso claro y acompañado para que sepas exactamente qué esperar en cada etapa.</p>
     </div>
 
     <div class="steps-grid">
@@ -1439,32 +1450,32 @@
       <div class="step reveal delay-1">
         <div class="step-num-wrap"><span class="step-num">01</span></div>
         <div class="step-body">
-          <div class="step-title">Consulta inicial</div>
-          <div class="step-desc">Hablamos sobre tu negocio, tus objetivos y qué necesitás. Sin compromiso y sin tecnicismos.</div>
+          <div class="step-title" data-i18n="proc.1.title">Consulta inicial</div>
+          <div class="step-desc" data-i18n="proc.1.desc">Hablamos sobre tu negocio, tus objetivos y qué necesitás. Sin compromiso y sin tecnicismos.</div>
         </div>
       </div>
 
       <div class="step reveal delay-2">
         <div class="step-num-wrap"><span class="step-num">02</span></div>
         <div class="step-body">
-          <div class="step-title">Propuesta y diseño</div>
-          <div class="step-desc">Te presento una propuesta visual adaptada a tu marca para que veas cómo va a quedar antes de arrancar.</div>
+          <div class="step-title" data-i18n="proc.2.title">Propuesta y diseño</div>
+          <div class="step-desc" data-i18n="proc.2.desc">Te presento una propuesta visual adaptada a tu marca para que veas cómo va a quedar antes de arrancar.</div>
         </div>
       </div>
 
       <div class="step reveal delay-3">
         <div class="step-num-wrap"><span class="step-num">03</span></div>
         <div class="step-body">
-          <div class="step-title">Desarrollo y revisiones</div>
-          <div class="step-desc">Construyo el sitio e incorporo tus devoluciones hasta que quede exactamente como lo imaginaste.</div>
+          <div class="step-title" data-i18n="proc.3.title">Desarrollo y revisiones</div>
+          <div class="step-desc" data-i18n="proc.3.desc">Construyo el sitio e incorporo tus devoluciones hasta que quede exactamente como lo imaginaste.</div>
         </div>
       </div>
 
       <div class="step reveal delay-4">
         <div class="step-num-wrap"><span class="step-num">04</span></div>
         <div class="step-body">
-          <div class="step-title">Publicación y entrega</div>
-          <div class="step-desc">Tu sitio queda online. Te explico cómo funciona y arranca el soporte post-entrega incluido.</div>
+          <div class="step-title" data-i18n="proc.4.title">Publicación y entrega</div>
+          <div class="step-desc" data-i18n="proc.4.desc">Tu sitio queda online. Te explico cómo funciona y arranca el soporte post-entrega incluido.</div>
         </div>
       </div>
 
@@ -1479,19 +1490,19 @@
 <section class="cta-mid">
   <div class="cta-mid-card reveal">
     <div class="cta-mid-text">
-      <div class="s-label">¿Empezamos?</div>
-      <h2 class="cta-mid-title">
+      <div class="s-label" data-i18n="ctamid.label">¿Empezamos?</div>
+      <h2 class="cta-mid-title" data-i18n-html="ctamid.title">
         Cada día sin web es un cliente<br>
         que <span class="grad-text">no te encuentra</span>
       </h2>
-      <p class="cta-mid-sub">Tu sitio puede estar online antes de lo que pensás. El proceso es simple, los resultados son reales.</p>
+      <p class="cta-mid-sub" data-i18n="ctamid.sub">Tu sitio puede estar online antes de lo que pensás. El proceso es simple, los resultados son reales.</p>
     </div>
     <div class="cta-mid-btns">
       <a href="#contacto" class="btn-grad">
-        Quiero mi sitio web
+        <span data-i18n="ctamid.btn1">Quiero mi sitio web</span>
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#inversion" class="btn-outline">Ver precios</a>
+      <a href="#inversion" class="btn-outline" data-i18n="ctamid.btn2">Ver precios</a>
     </div>
   </div>
 </section>
@@ -1503,35 +1514,35 @@
 <section id="inversion">
   <div class="container">
     <div class="reveal">
-      <div class="s-label">Inversión</div>
-      <h2 class="s-title">¿Cuánto cuesta?</h2>
-      <p class="s-sub">Sin letra chica ni sorpresas. El precio depende de lo que necesita tu negocio.</p>
+      <div class="s-label" data-i18n="inv.label">Inversión</div>
+      <h2 class="s-title" data-i18n="inv.title">¿Cuánto cuesta?</h2>
+      <p class="s-sub" data-i18n="inv.sub">Sin letra chica ni sorpresas. El precio depende de lo que necesita tu negocio.</p>
     </div>
 
     <div class="inv-card reveal">
 
       <div class="inv-price-side">
-        <div class="inv-from">desde</div>
+        <div class="inv-from" data-i18n="inv.from">desde</div>
         <div class="inv-price-val">$160.000</div>
-        <div class="inv-currency">ARS · pago único</div>
-        <p class="inv-sub">El precio final varía según las funcionalidades y la complejidad del proyecto.</p>
+        <div class="inv-currency" data-i18n="inv.currency">ARS · pago único</div>
+        <p class="inv-sub" data-i18n="inv.price.sub">El precio final varía según las funcionalidades y la complejidad del proyecto.</p>
       </div>
 
       <div class="inv-details">
 
         <div>
-          <div class="inv-block-title">Siempre incluido</div>
+          <div class="inv-block-title" data-i18n="inv.included.title">Siempre incluido</div>
           <ul class="inv-check-list">
-            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Diseño a medida para tu negocio</li>
-            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>100% responsive (celular, tablet y PC)</li>
-            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Formulario de contacto integrado</li>
-            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sitio publicado y listo para usar</li>
-            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>+30 días de soporte post-entrega</li>
+            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="inv.included.1">Diseño a medida para tu negocio</span></li>
+            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="inv.included.2">100% responsive (celular, tablet y PC)</span></li>
+            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="inv.included.3">Formulario de contacto integrado</span></li>
+            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="inv.included.4">Sitio publicado y listo para usar</span></li>
+            <li><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="inv.included.5">+30 días de soporte post-entrega</span></li>
           </ul>
         </div>
 
         <div>
-          <div class="inv-block-title">Podés sumar según tu negocio</div>
+          <div class="inv-block-title" data-i18n="inv.extras.title">Podés sumar según tu negocio</div>
           <div class="inv-tags">
             <span class="inv-tag">Más páginas</span>
             <span class="inv-tag">Blog</span>
@@ -1549,9 +1560,9 @@
     </div>
 
     <div class="inv-cta reveal">
-      <p>Contame tu proyecto y te mando un presupuesto sin compromiso.</p>
+      <p data-i18n="inv.cta.text">Contame tu proyecto y te mando un presupuesto sin compromiso.</p>
       <a href="#contacto" class="btn-grad">
-        Pedir presupuesto
+        <span data-i18n="inv.cta.btn">Pedir presupuesto</span>
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -1565,29 +1576,29 @@
 <section id="mantenimiento">
   <div class="container">
     <div class="reveal">
-      <div class="s-label">Planes mensuales</div>
-      <h2 class="s-title">Tu web siempre en buenas manos</h2>
-      <p class="s-sub">Una vez que tu sitio está online, podés sumar un plan mensual para que siga funcionando perfecto sin que tengas que ocuparte de nada.</p>
+      <div class="s-label" data-i18n="mant.label">Planes mensuales</div>
+      <h2 class="s-title" data-i18n="mant.title">Tu web siempre en buenas manos</h2>
+      <p class="s-sub" data-i18n="mant.sub">Una vez que tu sitio está online, podés sumar un plan mensual para que siga funcionando perfecto sin que tengas que ocuparte de nada.</p>
     </div>
 
     <div class="pricing-grid pricing-grid--solo">
 
       <article class="price-card featured reveal delay-1">
-        <div class="price-badge price-badge-muted">Mantenimiento</div>
-        <div class="price-name">Plan Esencial</div>
-        <div class="price-desc">Para mantener tu sitio actualizado y sin problemas, mes a mes.</div>
+        <div class="price-badge price-badge-muted" data-i18n="mant.badge">Mantenimiento</div>
+        <div class="price-name" data-i18n="mant.plan.name">Plan Esencial</div>
+        <div class="price-desc" data-i18n="mant.plan.desc">Para mantener tu sitio actualizado y sin problemas, mes a mes.</div>
         <div class="price-amount">
-          <span class="price-from">desde</span>
+          <span class="price-from" data-i18n="mant.from">desde</span>
           <span class="price-val gradient">$25.000</span>
-          <span class="price-period">/mes</span>
+          <span class="price-period" data-i18n="mant.period">/mes</span>
         </div>
         <ul class="price-features">
-          <li class="feat-on"><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Actualizaciones de contenido (textos, fotos, precios)</li>
-          <li class="feat-on"><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Soporte ante consultas o problemas</li>
-          <li class="feat-on"><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Revisión mensual de funcionamiento</li>
+          <li class="feat-on"><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="mant.feat.1">Actualizaciones de contenido (textos, fotos, precios)</span></li>
+          <li class="feat-on"><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="mant.feat.2">Soporte ante consultas o problemas</span></li>
+          <li class="feat-on"><svg width="15" height="15" fill="none" stroke="#4f46e5" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="mant.feat.3">Revisión mensual de funcionamiento</span></li>
         </ul>
         <a href="#contacto" class="btn-price-main">
-          Consultame
+          <span data-i18n="mant.btn">Consultame</span>
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </article>
@@ -1595,8 +1606,8 @@
     </div>
 
     <p class="mant-note reveal">
-      Los planes de mantenimiento se contratan <strong>después del desarrollo del sitio</strong>.<br>
-      Podés empezar, pausar o cancelar cuando quieras, sin permanencia mínima.
+      <span data-i18n-html="mant.note">Los planes de mantenimiento se contratan <strong>después del desarrollo del sitio</strong>.<br>
+      Podés empezar, pausar o cancelar cuando quieras, sin permanencia mínima.</span>
     </p>
   </div>
 </section>
@@ -1611,7 +1622,7 @@
       <div class="about-card reveal">
         <img src="img/villani-icono.png" alt="Lara Villani logo" class="about-logo">
         <div class="about-name">Lara Villani</div>
-        <div class="about-role">Desarrolladora Web</div>
+        <div class="about-role" data-i18n="about.role">Desarrolladora Web</div>
         <div class="about-chips">
           <span class="chip">HTML &amp; CSS</span>
           <span class="chip">JavaScript</span>
@@ -1623,19 +1634,19 @@
       </div>
 
       <div class="about-text reveal delay-1">
-        <div class="s-label">Sobre mí</div>
-        <h2 class="s-title">Hola, soy Lara</h2>
+        <div class="s-label" data-i18n="about.label">Sobre mí</div>
+        <h2 class="s-title" data-i18n="about.title">Hola, soy Lara</h2>
 
         <div class="about-paras">
-          <p>Ayudo a emprendedores a <strong>dejar de perder clientes</strong> por no tener presencia online. Diseño sitios web a medida que muestran tu negocio de forma profesional y generan confianza desde el primer clic.</p>
-          <p>No necesitás entender de tecnología. Yo me encargo de todo: te explico cada paso en términos simples, incorporo tus devoluciones y <strong>no entrego hasta que estés conforme</strong>.</p>
-          <p>Cada proyecto es distinto y lo trato así. Nada de plantillas genéricas — tu sitio va a reflejar exactamente lo que hace <strong>único a tu negocio</strong>.</p>
+          <p data-i18n-html="about.p1">Ayudo a emprendedores a <strong>dejar de perder clientes</strong> por no tener presencia online. Diseño sitios web a medida que muestran tu negocio de forma profesional y generan confianza desde el primer clic.</p>
+          <p data-i18n-html="about.p2">No necesitás entender de tecnología. Yo me encargo de todo: te explico cada paso en términos simples, incorporo tus devoluciones y <strong>no entrego hasta que estés conforme</strong>.</p>
+          <p data-i18n-html="about.p3">Cada proyecto es distinto y lo trato así. Nada de plantillas genéricas — tu sitio va a reflejar exactamente lo que hace <strong>único a tu negocio</strong>.</p>
         </div>
 
         <div class="about-bullets">
-          <div class="about-bullet"><div class="bullet-dot"></div>Tu web lista sin que tengas que entender de código</div>
-          <div class="about-bullet"><div class="bullet-dot"></div>Sabés en todo momento cómo va tu proyecto</div>
-          <div class="about-bullet"><div class="bullet-dot"></div>Un sitio que te representa, no uno genérico de plantilla</div>
+          <div class="about-bullet"><div class="bullet-dot"></div><span data-i18n="about.bullet1">Tu web lista sin que tengas que entender de código</span></div>
+          <div class="about-bullet"><div class="bullet-dot"></div><span data-i18n="about.bullet2">Sabés en todo momento cómo va tu proyecto</span></div>
+          <div class="about-bullet"><div class="bullet-dot"></div><span data-i18n="about.bullet3">Un sitio que te representa, no uno genérico de plantilla</span></div>
         </div>
       </div>
 
@@ -1650,9 +1661,9 @@
 <section id="tips">
   <div class="container">
     <div class="reveal">
-      <div class="s-label">¿Por qué una web?</div>
-      <h2 class="s-title">3 razones por las que tu negocio necesita un sitio web</h2>
-      <p class="s-sub">Si todavía manejás todo por Instagram, esto es para vos.</p>
+      <div class="s-label" data-i18n="tips.label">¿Por qué una web?</div>
+      <h2 class="s-title" data-i18n="tips.title">3 razones por las que tu negocio necesita un sitio web</h2>
+      <p class="s-sub" data-i18n="tips.sub">Si todavía manejás todo por Instagram, esto es para vos.</p>
     </div>
 
     <div class="tips-grid">
@@ -1660,22 +1671,22 @@
       <article class="tip-card reveal delay-1">
         <span class="tip-number">01</span>
         <span class="tip-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-        <div class="tip-title">Tu negocio trabaja aunque vos no estés</div>
-        <div class="tip-body">Un sitio web está disponible las <strong>24 horas, los 7 días</strong>. Tus clientes pueden conocerte, ver tus servicios y contactarte aunque sea medianoche o feriado.</div>
+        <div class="tip-title" data-i18n="tips.1.title">Tu negocio trabaja aunque vos no estés</div>
+        <div class="tip-body" data-i18n-html="tips.1.body">Un sitio web está disponible las <strong>24 horas, los 7 días</strong>. Tus clientes pueden conocerte, ver tus servicios y contactarte aunque sea medianoche o feriado.</div>
       </article>
 
       <article class="tip-card reveal delay-2">
         <span class="tip-number">02</span>
         <span class="tip-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span>
-        <div class="tip-title">Tus clientes te buscan en Google antes de escribirte</div>
-        <div class="tip-body">La mayoría de las personas <strong>investiga online antes de contratar</strong>. Si no aparecés en esa búsqueda, directamente no existís para ese cliente potencial.</div>
+        <div class="tip-title" data-i18n="tips.2.title">Tus clientes te buscan en Google antes de escribirte</div>
+        <div class="tip-body" data-i18n-html="tips.2.body">La mayoría de las personas <strong>investiga online antes de contratar</strong>. Si no aparecés en esa búsqueda, directamente no existís para ese cliente potencial.</div>
       </article>
 
       <article class="tip-card reveal delay-3">
         <span class="tip-number">03</span>
         <span class="tip-icon"><svg fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
-        <div class="tip-title">Tu cuenta de Instagram no te pertenece</div>
-        <div class="tip-body">Instagram puede cambiar el algoritmo, restringir tu alcance o suspender tu cuenta. <strong>Tu web es tuya para siempre</strong>, sin depender de ninguna red social.</div>
+        <div class="tip-title" data-i18n="tips.3.title">Tu cuenta de Instagram no te pertenece</div>
+        <div class="tip-body" data-i18n-html="tips.3.body">Instagram puede cambiar el algoritmo, restringir tu alcance o suspender tu cuenta. <strong>Tu web es tuya para siempre</strong>, sin depender de ninguna red social.</div>
       </article>
 
     </div>
@@ -1691,13 +1702,13 @@
 
     <!-- encabezado centrado -->
     <div class="contact-head reveal">
-      <div class="s-label">Contacto</div>
-      <h2 class="contact-phrase">
+      <div class="s-label" data-i18n="contact.label">Contacto</div>
+      <h2 class="contact-phrase" data-i18n-html="contact.title">
         Tu negocio es demasiado bueno<br>
         como para que nadie lo encuentre
         <span class="grad-text2"> en internet</span>
       </h2>
-      <p class="contact-sub">Escribime hoy y en poco tiempo tenés tu sitio web listo. Sin vueltas, sin tecnicismos, con resultados.</p>
+      <p class="contact-sub" data-i18n="contact.sub">Escribime hoy y en poco tiempo tenés tu sitio web listo. Sin vueltas, sin tecnicismos, con resultados.</p>
     </div>
 
     <!-- grid: formulario + canales -->
@@ -1707,26 +1718,26 @@
       <!-- Para activar el envío: creá una cuenta gratis en formspree.io,
            añadí tu email y reemplazá YOUR_FORM_ID por el ID que te dan. -->
       <div class="contact-form-wrap reveal delay-1">
-        <h3>Enviame un mensaje</h3>
+        <h3 data-i18n="contact.form.title">Enviame un mensaje</h3>
         <form id="contactForm" action="https://formspree.io/f/xbdqlpjl" method="POST" novalidate>
 
           <div class="form-row">
             <div class="form-field">
-              <label class="form-label" for="cf-name">Nombre</label>
+              <label class="form-label" for="cf-name" data-i18n="contact.name.label">Nombre</label>
               <input class="form-input" type="text" id="cf-name" name="name"
-                     placeholder="Tu nombre" required autocomplete="name" />
+                     placeholder="Tu nombre" data-i18n-placeholder="contact.name.placeholder" required autocomplete="name" />
             </div>
             <div class="form-field">
-              <label class="form-label" for="cf-email">Email</label>
+              <label class="form-label" for="cf-email" data-i18n="contact.email.label">Email</label>
               <input class="form-input" type="email" id="cf-email" name="email"
                      placeholder="tu@email.com" required autocomplete="email" />
             </div>
           </div>
 
           <div class="form-field">
-            <label class="form-label" for="cf-msg">Mensaje</label>
+            <label class="form-label" for="cf-msg" data-i18n="contact.msg.label">Mensaje</label>
             <textarea class="form-textarea" id="cf-msg" name="message"
-                      placeholder="Contame un poco sobre tu negocio y qué necesitás..." required></textarea>
+                      placeholder="Contame un poco sobre tu negocio y qué necesitás..." data-i18n-placeholder="contact.msg.placeholder" required></textarea>
           </div>
 
           <!-- campo oculto para que Formspree sepa a dónde redirigir el reply -->
@@ -1734,7 +1745,7 @@
 
           <button type="submit" class="form-submit" id="formSubmit">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            Enviar consulta
+            <span data-i18n="contact.submit">Enviar consulta</span>
           </button>
 
           <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
@@ -1743,7 +1754,7 @@
 
       <!-- CANALES DIRECTOS -->
       <div class="contact-links-col reveal delay-2">
-        <p class="contact-links-col-title">O contactame directo</p>
+        <p class="contact-links-col-title" data-i18n="contact.direct">O contactame directo</p>
 
         <a href="https://wa.me/5401157215696?text=Hola!%20Vi%20tu%20web%20y%20me%20gustar%C3%ADa%20que%20realices%20un%20sitio%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="cbtn cbtn-wa">
           <div class="cbtn-icon">
@@ -1795,16 +1806,156 @@
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
-  <span class="fab-label">¡Hablemos!</span>
+  <span class="fab-label" data-i18n="fab.label">¡Hablemos!</span>
 </a>
 
 <!-- ─────────── FOOTER ─────────── -->
 <footer>
-  <p>© 2026 <strong>Lara Villani</strong> · Webs profesionales para negocios que quieren estar online</p>
+  <p data-i18n-html="footer.text">© 2026 <strong>Lara Villani</strong> · Webs profesionales para negocios que quieren estar online</p>
 </footer>
 
 
 <script>
+  /* ─── TRANSLATIONS ──────────────────────────────────────── */
+  const translations = {
+    es: {
+      'nav.works':'Trabajos','nav.solutions':'Soluciones','nav.pricing':'Precios','nav.plans':'Planes','nav.about':'Sobre mí','nav.contact':'Contacto',
+      'hero.badge':'Disponible para nuevos proyectos',
+      'hero.title':'Conseguí más clientes<br>con una web que <span class="grad-text">trabaja por vos</span>',
+      'hero.sub':'Diseño sitios web a medida para emprendedores que quieren crecer <strong>sin depender del algoritmo de Instagram</strong>.<br>Tu negocio visible las 24 hs. <strong>Sin tecnicismos. Sin vueltas.</strong>',
+      'hero.btn1':'Quiero mi sitio web','hero.btn2':'Ver trabajos',
+      'hero.stat1':'Negocios digitalizados','hero.stat2':'Atención directa','hero.stat3':'Soporte post-entrega',
+      'proj.label':'Portfolio','proj.title':'Mis trabajos','proj.sub':'Proyectos reales de negocios que ya cuentan con presencia digital profesional.','proj.wip':'En progreso','proj.visit':'Ver sitio',
+      'tipos.label':'Soluciones web','tipos.title':'¿Qué tipo de sitio necesitás?','tipos.sub':'Desde una página simple hasta funcionalidades avanzadas. Si lo imaginás, lo construimos.',
+      'tipos.landing.name':'Landing Page','tipos.landing.desc':'Una sola página enfocada en convertir visitantes en clientes. Ideal para emprendedores que arrancan.',
+      'tipos.complete.name':'Sitio Web Completo','tipos.complete.desc':'Múltiples páginas y secciones para negocios que necesitan mostrar más: servicios, equipo, galería, blog.',
+      'tipos.catalog.name':'Catálogo de Productos','tipos.catalog.desc':'Mostrá tus productos con fotos, descripción y precios de forma ordenada y profesional, sin necesidad de una tienda online.',
+      'tipos.chatbot.name':'Chatbot + FAQ Inteligente','tipos.chatbot.desc':'Un asistente que responde preguntas de tus clientes automáticamente, las 24 hs, sin que intervengas.',
+      'tipos.calc.name':'Calculadora o Cotizador','tipos.calc.desc':'Tu cliente ingresa sus datos y obtiene un presupuesto o cálculo al instante. Genera leads calificados.',
+      'tipos.reservas.name':'Reservas y Turnos','tipos.reservas.desc':'Sistema de agenda online para que tus clientes reserven horarios solos, sin llamadas ni mensajes de ida y vuelta.',
+      'tipos.bilingual.name':'Sitio Bilingüe','tipos.bilingual.desc':'Tu web en español e inglés para llegar a más mercados. Ideal si tenés clientes o proveedores internacionales.',
+      'tipos.shop.name':'Tienda Online','tipos.shop.desc':'Vendé tus productos directamente desde tu sitio, con carrito, pagos y gestión de stock integrados.',
+      'tipos.portfolio.name':'Portfolio Visual','tipos.portfolio.desc':'Galería de trabajos para fotógrafos, diseñadores, artistas y creativos que necesitan mostrar su obra.',
+      'tipos.cta.text':'¿No encontrás lo que buscás? Podemos hacer algo completamente a medida.','tipos.cta.btn':'Consultame por tu proyecto',
+      'svc.label':'Servicios','svc.title':'¿Qué ofrezco?','svc.sub':'Todo lo que necesitás para tener presencia digital profesional, rápido y sin complicaciones.',
+      'svc.1.name':'Diseño a medida','svc.1.desc':'Tu sitio refleja la identidad de tu marca. Nada genérico, nada de plantillas copiadas.',
+      'svc.2.name':'100% responsive','svc.2.desc':'Se ve perfecto en celular, tablet y computadora. Porque tus clientes navegan desde todos lados.',
+      'svc.3.name':'Rápido y optimizado','svc.3.desc':'Sitios que cargan rápido y funcionan bien. Los visitantes no esperan, y Google lo valora.',
+      'svc.4.name':'Desplegado y listo','svc.4.desc':'Me encargo de publicar el sitio. Cuando terminamos, ya está en vivo y accesible para todos.',
+      'svc.5.name':'Comunicación clara','svc.5.desc':'Trabajo con vos, no para vos. Te explico todo sin tecnicismos durante todo el proceso.',
+      'svc.6.name':'Soporte post-entrega','svc.6.desc':'¿Necesitás un cambio después del lanzamiento? Estoy disponible para ayudarte.',
+      'proc.label':'Cómo trabajo','proc.title':'Del primer mensaje al sitio online','proc.sub':'Un proceso claro y acompañado para que sepas exactamente qué esperar en cada etapa.',
+      'proc.1.title':'Consulta inicial','proc.1.desc':'Hablamos sobre tu negocio, tus objetivos y qué necesitás. Sin compromiso y sin tecnicismos.',
+      'proc.2.title':'Propuesta y diseño','proc.2.desc':'Te presento una propuesta visual adaptada a tu marca para que veas cómo va a quedar antes de arrancar.',
+      'proc.3.title':'Desarrollo y revisiones','proc.3.desc':'Construyo el sitio e incorporo tus devoluciones hasta que quede exactamente como lo imaginaste.',
+      'proc.4.title':'Publicación y entrega','proc.4.desc':'Tu sitio queda online. Te explico cómo funciona y arranca el soporte post-entrega incluido.',
+      'ctamid.label':'¿Empezamos?','ctamid.title':'Cada día sin web es un cliente<br>que <span class="grad-text">no te encuentra</span>','ctamid.sub':'Tu sitio puede estar online antes de lo que pensás. El proceso es simple, los resultados son reales.','ctamid.btn1':'Quiero mi sitio web','ctamid.btn2':'Ver precios',
+      'inv.label':'Inversión','inv.title':'¿Cuánto cuesta?','inv.sub':'Sin letra chica ni sorpresas. El precio depende de lo que necesita tu negocio.',
+      'inv.from':'desde','inv.currency':'ARS · pago único','inv.price.sub':'El precio final varía según las funcionalidades y la complejidad del proyecto.',
+      'inv.included.title':'Siempre incluido','inv.included.1':'Diseño a medida para tu negocio','inv.included.2':'100% responsive (celular, tablet y PC)','inv.included.3':'Formulario de contacto integrado','inv.included.4':'Sitio publicado y listo para usar','inv.included.5':'+30 días de soporte post-entrega',
+      'inv.extras.title':'Podés sumar según tu negocio','inv.cta.text':'Contame tu proyecto y te mando un presupuesto sin compromiso.','inv.cta.btn':'Pedir presupuesto',
+      'mant.label':'Planes mensuales','mant.title':'Tu web siempre en buenas manos','mant.sub':'Una vez que tu sitio está online, podés sumar un plan mensual para que siga funcionando perfecto sin que tengas que ocuparte de nada.',
+      'mant.badge':'Mantenimiento','mant.plan.name':'Plan Esencial','mant.plan.desc':'Para mantener tu sitio actualizado y sin problemas, mes a mes.',
+      'mant.from':'desde','mant.period':'/mes','mant.feat.1':'Actualizaciones de contenido (textos, fotos, precios)','mant.feat.2':'Soporte ante consultas o problemas','mant.feat.3':'Revisión mensual de funcionamiento','mant.btn':'Consultame',
+      'mant.note':'Los planes de mantenimiento se contratan <strong>después del desarrollo del sitio</strong>.<br>Podés empezar, pausar o cancelar cuando quieras, sin permanencia mínima.',
+      'about.label':'Sobre mí','about.role':'Desarrolladora Web','about.title':'Hola, soy Lara',
+      'about.p1':'Ayudo a emprendedores a <strong>dejar de perder clientes</strong> por no tener presencia online. Diseño sitios web a medida que muestran tu negocio de forma profesional y generan confianza desde el primer clic.',
+      'about.p2':'No necesitás entender de tecnología. Yo me encargo de todo: te explico cada paso en términos simples, incorporo tus devoluciones y <strong>no entrego hasta que estés conforme</strong>.',
+      'about.p3':'Cada proyecto es distinto y lo trato así. Nada de plantillas genéricas — tu sitio va a reflejar exactamente lo que hace <strong>único a tu negocio</strong>.',
+      'about.bullet1':'Tu web lista sin que tengas que entender de código','about.bullet2':'Sabés en todo momento cómo va tu proyecto','about.bullet3':'Un sitio que te representa, no uno genérico de plantilla',
+      'tips.label':'¿Por qué una web?','tips.title':'3 razones por las que tu negocio necesita un sitio web','tips.sub':'Si todavía manejás todo por Instagram, esto es para vos.',
+      'tips.1.title':'Tu negocio trabaja aunque vos no estés','tips.1.body':'Un sitio web está disponible las <strong>24 horas, los 7 días</strong>. Tus clientes pueden conocerte, ver tus servicios y contactarte aunque sea medianoche o feriado.',
+      'tips.2.title':'Tus clientes te buscan en Google antes de escribirte','tips.2.body':'La mayoría de las personas <strong>investiga online antes de contratar</strong>. Si no aparecés en esa búsqueda, directamente no existís para ese cliente potencial.',
+      'tips.3.title':'Tu cuenta de Instagram no te pertenece','tips.3.body':'Instagram puede cambiar el algoritmo, restringir tu alcance o suspender tu cuenta. <strong>Tu web es tuya para siempre</strong>, sin depender de ninguna red social.',
+      'contact.label':'Contacto','contact.title':'Tu negocio es demasiado bueno<br>como para que nadie lo encuentre<span class="grad-text2"> en internet</span>','contact.sub':'Escribime hoy y en poco tiempo tenés tu sitio web listo. Sin vueltas, sin tecnicismos, con resultados.',
+      'contact.form.title':'Enviame un mensaje','contact.name.label':'Nombre','contact.name.placeholder':'Tu nombre','contact.email.label':'Email','contact.msg.label':'Mensaje','contact.msg.placeholder':'Contame un poco sobre tu negocio y qué necesitás...','contact.submit':'Enviar consulta','contact.direct':'O contactame directo',
+      'fab.label':'¡Hablemos!',
+      'footer.text':'© 2026 <strong>Lara Villani</strong> · Webs profesionales para negocios que quieren estar online',
+      'form.sending':'Enviando…','form.sent':'✓ ¡Mensaje enviado! Te respondo a la brevedad.','form.err.name':'Ingresá tu nombre (mínimo 2 caracteres)','form.err.email':'Ingresá un email válido','form.err.msg':'El mensaje debe tener al menos 10 caracteres',
+    },
+    en: {
+      'nav.works':'Work','nav.solutions':'Solutions','nav.pricing':'Pricing','nav.plans':'Plans','nav.about':'About','nav.contact':'Contact',
+      'hero.badge':'Available for new projects',
+      'hero.title':'Get more clients<br>with a website that <span class="grad-text">works for you</span>',
+      'hero.sub':'I design custom websites for entrepreneurs who want to grow <strong>without depending on Instagram\'s algorithm</strong>.<br>Your business visible 24/7. <strong>No jargon. No hassle.</strong>',
+      'hero.btn1':'I want my website','hero.btn2':'See my work',
+      'hero.stat1':'Businesses online','hero.stat2':'Direct attention','hero.stat3':'Post-launch support',
+      'proj.label':'Portfolio','proj.title':'My work','proj.sub':'Real business projects that already have a professional digital presence.','proj.wip':'In progress','proj.visit':'Visit site',
+      'tipos.label':'Web solutions','tipos.title':'What type of site do you need?','tipos.sub':'From a simple page to advanced features. If you can imagine it, we can build it.',
+      'tipos.landing.name':'Landing Page','tipos.landing.desc':'A single page focused on converting visitors into clients. Ideal for entrepreneurs just starting out.',
+      'tipos.complete.name':'Full Website','tipos.complete.desc':'Multiple pages and sections for businesses that need to show more: services, team, gallery, blog.',
+      'tipos.catalog.name':'Product Catalogue','tipos.catalog.desc':'Showcase your products with photos, descriptions and prices in an organised, professional way — no online store needed.',
+      'tipos.chatbot.name':'Chatbot + Smart FAQ','tipos.chatbot.desc':'An assistant that answers your clients\' questions automatically, 24/7, without you having to step in.',
+      'tipos.calc.name':'Calculator or Quote Tool','tipos.calc.desc':'Your client enters their details and gets an instant estimate. Generates qualified leads.',
+      'tipos.reservas.name':'Bookings & Appointments','tipos.reservas.desc':'An online scheduling system so clients can book their own slots — no back-and-forth messages.',
+      'tipos.bilingual.name':'Bilingual Site','tipos.bilingual.desc':'Your website in Spanish and English to reach more markets. Ideal if you have international clients or suppliers.',
+      'tipos.shop.name':'Online Shop','tipos.shop.desc':'Sell your products directly from your site, with cart, payments and stock management built in.',
+      'tipos.portfolio.name':'Visual Portfolio','tipos.portfolio.desc':'A gallery for photographers, designers, artists and creatives who need to show their work.',
+      'tipos.cta.text':'Can\'t find what you\'re looking for? We can build something completely custom.','tipos.cta.btn':'Tell me about your project',
+      'svc.label':'Services','svc.title':'What do I offer?','svc.sub':'Everything you need to have a professional digital presence, fast and without complications.',
+      'svc.1.name':'Custom design','svc.1.desc':'Your site reflects your brand identity. Nothing generic, no copied templates.',
+      'svc.2.name':'100% responsive','svc.2.desc':'Looks perfect on mobile, tablet and desktop. Because your clients browse from everywhere.',
+      'svc.3.name':'Fast and optimised','svc.3.desc':'Sites that load quickly and perform well. Visitors don\'t wait, and Google rewards it.',
+      'svc.4.name':'Deployed and ready','svc.4.desc':'I handle publishing the site. When we\'re done, it\'s live and accessible to everyone.',
+      'svc.5.name':'Clear communication','svc.5.desc':'I work with you, not just for you. I explain everything without jargon throughout the process.',
+      'svc.6.name':'Post-launch support','svc.6.desc':'Need a change after launch? I\'m available to help you.',
+      'proc.label':'How I work','proc.title':'From first message to live site','proc.sub':'A clear, guided process so you know exactly what to expect at each stage.',
+      'proc.1.title':'Initial consultation','proc.1.desc':'We talk about your business, your goals and what you need. No commitment, no jargon.',
+      'proc.2.title':'Proposal and design','proc.2.desc':'I present a visual proposal tailored to your brand so you can see how it\'ll look before we start.',
+      'proc.3.title':'Development and revisions','proc.3.desc':'I build the site and incorporate your feedback until it looks exactly how you imagined.',
+      'proc.4.title':'Launch and delivery','proc.4.desc':'Your site goes live. I explain how everything works and post-launch support kicks in.',
+      'ctamid.label':'Ready to start?','ctamid.title':'Every day without a website is a client<br>who <span class="grad-text">can\'t find you</span>','ctamid.sub':'Your site can be online sooner than you think. The process is simple, the results are real.','ctamid.btn1':'I want my website','ctamid.btn2':'See pricing',
+      'inv.label':'Investment','inv.title':'How much does it cost?','inv.sub':'No fine print, no surprises. The price depends on what your business needs.',
+      'inv.from':'from','inv.currency':'ARS · one-time payment','inv.price.sub':'The final price varies depending on the features and complexity of the project.',
+      'inv.included.title':'Always included','inv.included.1':'Custom design for your business','inv.included.2':'100% responsive (mobile, tablet and PC)','inv.included.3':'Integrated contact form','inv.included.4':'Site published and ready to use','inv.included.5':'+30 days of post-launch support',
+      'inv.extras.title':'Add-ons for your business','inv.cta.text':'Tell me about your project and I\'ll send you a no-commitment quote.','inv.cta.btn':'Request a quote',
+      'mant.label':'Monthly plans','mant.title':'Your website always in good hands','mant.sub':'Once your site is live, you can add a monthly plan so it keeps running perfectly without you having to worry about anything.',
+      'mant.badge':'Maintenance','mant.plan.name':'Essential Plan','mant.plan.desc':'To keep your site up to date and trouble-free, month after month.',
+      'mant.from':'from','mant.period':'/mo','mant.feat.1':'Content updates (text, photos, prices)','mant.feat.2':'Support for questions or issues','mant.feat.3':'Monthly performance check','mant.btn':'Contact me',
+      'mant.note':'Maintenance plans are hired <strong>after the site has been developed</strong>.<br>You can start, pause or cancel at any time — no minimum commitment.',
+      'about.label':'About me','about.role':'Web Developer','about.title':'Hi, I\'m Lara',
+      'about.p1':'I help entrepreneurs <strong>stop losing clients</strong> due to having no online presence. I design custom websites that showcase your business professionally and build trust from the first click.',
+      'about.p2':'You don\'t need to understand technology. I take care of everything: I explain each step in plain language, incorporate your feedback and <strong>won\'t deliver until you\'re happy</strong>.',
+      'about.p3':'Every project is different and I treat it that way. No generic templates — your site will reflect exactly what makes <strong>your business unique</strong>.',
+      'about.bullet1':'Your website ready without needing to understand code','about.bullet2':'You know at every moment how your project is going','about.bullet3':'A site that represents you, not a generic template',
+      'tips.label':'Why a website?','tips.title':'3 reasons your business needs a website','tips.sub':'If you\'re still running everything through Instagram, this is for you.',
+      'tips.1.title':'Your business works even when you\'re not','tips.1.body':'A website is available <strong>24 hours a day, 7 days a week</strong>. Your clients can learn about you, see your services and contact you even at midnight or on holidays.',
+      'tips.2.title':'Your clients Google you before reaching out','tips.2.body':'Most people <strong>research online before hiring</strong>. If you don\'t appear in that search, you simply don\'t exist for that potential client.',
+      'tips.3.title':'Your Instagram account doesn\'t belong to you','tips.3.body':'Instagram can change the algorithm, restrict your reach or suspend your account. <strong>Your website is yours forever</strong>, without depending on any social network.',
+      'contact.label':'Contact','contact.title':'Your business is too good<br>for no one to find it<span class="grad-text2"> online</span>','contact.sub':'Message me today and your website will be ready sooner than you think. No hassle, no jargon, real results.',
+      'contact.form.title':'Send me a message','contact.name.label':'Name','contact.name.placeholder':'Your name','contact.email.label':'Email','contact.msg.label':'Message','contact.msg.placeholder':'Tell me a bit about your business and what you need...','contact.submit':'Send message','contact.direct':'Or contact me directly',
+      'fab.label':'Let\'s talk!',
+      'footer.text':'© 2026 <strong>Lara Villani</strong> · Professional websites for businesses that want to be online',
+      'form.sending':'Sending…','form.sent':'✓ Message sent! I\'ll get back to you shortly.','form.err.name':'Enter your name (minimum 2 characters)','form.err.email':'Enter a valid email','form.err.msg':'Message must be at least 10 characters',
+    }
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'es';
+
+  function applyLang(lang) {
+    const t = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      if (t[el.dataset.i18n] !== undefined) el.textContent = t[el.dataset.i18n];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      if (t[el.dataset.i18nHtml] !== undefined) el.innerHTML = t[el.dataset.i18nHtml];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      if (t[el.dataset.i18nPlaceholder] !== undefined) el.placeholder = t[el.dataset.i18nPlaceholder];
+    });
+    const toggle = document.getElementById('langToggle');
+    if (toggle) toggle.textContent = lang === 'es' ? 'EN' : 'ES';
+    document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+    localStorage.setItem('lang', lang);
+    currentLang = lang;
+  }
+
+  document.getElementById('langToggle').addEventListener('click', () => {
+    applyLang(currentLang === 'es' ? 'en' : 'es');
+  });
+
+  applyLang(currentLang);
+
   /* NAV scroll */
   const nav   = document.getElementById('nav');
   const fabWa = document.getElementById('fabWa');
