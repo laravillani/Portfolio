@@ -287,45 +287,34 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem; margin-top: 3rem;
     }
 
-    .proj-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: var(--r); overflow: hidden;
-      transition: border-color .3s, transform .3s, box-shadow .3s;
-    }
-    .proj-card:hover {
-      border-color: var(--border-hi); transform: translateY(-5px);
-      box-shadow: 0 24px 60px rgba(79,70,229,.12);
-    }
+    .proj-item { display: flex; flex-direction: column; }
 
-    /* project image */
     .proj-img-wrap {
-      height: 220px; overflow: hidden; position: relative;
-      background: var(--bg2);
+      position: relative; border-radius: 14px; overflow: hidden;
+      aspect-ratio: 3/2; background: var(--bg2); margin-bottom: 1rem;
     }
     .proj-img {
       width: 100%; height: 100%;
       object-fit: cover; object-position: top;
-      display: block;
-      transition: transform .45s ease;
+      display: block; transition: transform .45s ease;
     }
-    .proj-card:hover .proj-img { transform: scale(1.04); }
+    .proj-item:hover .proj-img { transform: scale(1.04); }
+
     .badge-wip {
       position: absolute; top: 12px; left: 12px; z-index: 2;
       display: inline-flex; align-items: center; gap: 5px;
       padding: 4px 10px; border-radius: 20px;
-      background: #1e1e2e;
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #1e1e2e; border: 1px solid rgba(255,255,255,0.08);
       font-size: .72rem; font-weight: 500; letter-spacing: .03em;
       color: rgba(255,255,255,0.85);
     }
     .badge-wip::before {
       content: ''; width: 6px; height: 6px; border-radius: 50%;
       background: #f59e0b;
-      box-shadow: 0 0 0 0 rgba(245,158,11,.6);
       animation: pulse-dot 2s ease-in-out infinite;
     }
     @keyframes pulse-dot {
@@ -333,41 +322,25 @@
       50%      { box-shadow: 0 0 0 5px rgba(245,158,11,0); }
     }
 
-    .proj-body { padding: 1.8rem 2rem; }
-
-    .proj-client {
-      display: flex; align-items: center; gap: .75rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.2rem; font-weight: 700; margin-bottom: 1.4rem;
+    .proj-info { display: flex; flex-direction: column; flex: 1; }
+    .proj-name { font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: .2rem; }
+    .proj-rubro { font-size: .82rem; color: var(--muted); margin-bottom: .85rem; }
+    .proj-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: auto;
     }
-    .proj-icon {
-      width: 38px; height: 38px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center; font-size: 1rem;
+    .proj-type {
+      font-size: .68rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .09em; color: var(--dim);
+      border: 1px solid var(--border); padding: .2rem .65rem; border-radius: 50px;
     }
-    .proj-icon-blue  { background: rgba(79,70,229,.12); }
-    .proj-icon-pink  { background: rgba(232,121,249,.12); }
-
-    .proj-rows { display: flex; flex-direction: column; gap: .85rem; margin-bottom: 1.5rem; }
-    .proj-row  { display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: start; }
-
-    .tag {
-      font-size: .65rem; font-weight: 800; text-transform: uppercase;
-      letter-spacing: .07em; padding: .18rem .55rem; border-radius: 50px;
-      white-space: nowrap; margin-top: .12rem;
-    }
-    .tag-prob { background: rgba(239,68,68,.1); color: #f87171; border: 1px solid rgba(239,68,68,.2); }
-    .tag-sol  { background: rgba(79,70,229,.1); color: #4f46e5; border: 1px solid rgba(79,70,229,.2); }
-    .tag-res  { background: rgba(16,185,129,.1); color: #34d399; border: 1px solid rgba(16,185,129,.2); }
-
-    .proj-row p { color: var(--muted); font-size: .875rem; line-height: 1.55; }
 
     .btn-site {
-      display: inline-flex; align-items: center; gap: .45rem;
-      background: transparent; border: 1px solid rgba(16,185,129,.45);
-      color: #34d399; padding: .55rem 1.15rem; border-radius: 50px;
-      font-size: .825rem; font-weight: 600; transition: .25s;
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: .82rem; font-weight: 600; color: var(--indigo);
+      transition: gap .2s;
     }
-    .btn-site:hover { border-color: #10b981; background: rgba(16,185,129,.08); color: #6ee7b7; }
+    .btn-site:hover { gap: .65rem; }
     .btn-site svg { transition: transform .2s; }
     .btn-site:hover svg { transform: translate(2px,-2px); }
 
@@ -1120,8 +1093,9 @@
 
     /* ─── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 960px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .about-grid    { grid-template-columns: 1fr; gap: 2.5rem; }
+      .services-grid  { grid-template-columns: repeat(2, 1fr); }
+      .about-grid     { grid-template-columns: 1fr; gap: 2.5rem; }
+      .projects-grid  { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -1268,90 +1242,57 @@
     <div class="projects-grid">
 
       <!-- NuevoPack -->
-      <article class="proj-card reveal delay-1">
+      <article class="proj-item reveal delay-1">
         <div class="proj-img-wrap">
-          <img src="img/mockup-nuevopack.png" alt="Mockup del sitio de Gráfica NuevoPack" class="proj-img" />
+          <img src="img/mockup-nuevopack.png" alt="Mockup del sitio de Gráfica NuevoPack" class="proj-img">
         </div>
-
-        <div class="proj-body">
-          <div class="proj-client">
-            Gráfica NuevoPack
+        <div class="proj-info">
+          <div class="proj-name">Gráfica NuevoPack</div>
+          <div class="proj-rubro">Gráfica & Packaging</div>
+          <div class="proj-footer">
+            <span class="proj-type">Landing page</span>
+            <a href="https://imprentanuevopack.online/" target="_blank" class="btn-site">
+              Ver sitio
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
           </div>
-
-          <div class="proj-rows">
-            <div class="proj-row">
-              <span class="tag tag-prob">Problema</span>
-              <p>Gráfica con más de 20 años de experiencia, no tenían sitio web ni presencia digital.</p>
-            </div>
-            <div class="proj-row">
-              <span class="tag tag-sol">Solución</span>
-              <p>Landing page atractiva, profesional e informativa: servicios, trabajos reales e información de contacto.</p>
-            </div>
-          </div>
-
-          <a href="https://imprentanuevopack.online/" target="_blank" class="btn-site">
-            Resultado — Ver sitio
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
         </div>
       </article>
 
       <!-- Nails by Nanu -->
-      <article class="proj-card reveal delay-2">
+      <article class="proj-item reveal delay-2">
         <div class="proj-img-wrap">
-          <img src="img/mockup-nails-by-nanu.png" alt="Mockup del sitio de Nails by Nanu" class="proj-img" />
+          <img src="img/mockup-nails-by-nanu.png" alt="Mockup del sitio de Nails by Nanu" class="proj-img">
           <span class="badge-wip">En progreso</span>
         </div>
-
-        <div class="proj-body">
-          <div class="proj-client">
-            Nails by Nanu
+        <div class="proj-info">
+          <div class="proj-name">Nails by Nanu</div>
+          <div class="proj-rubro">Manicuría & Nail Art</div>
+          <div class="proj-footer">
+            <span class="proj-type">Landing page</span>
+            <a href="https://laravillani.github.io/nails-by-nanu" target="_blank" class="btn-site">
+              Ver sitio
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
           </div>
-
-          <div class="proj-rows">
-            <div class="proj-row">
-              <span class="tag tag-prob">Problema</span>
-              <p>Manicurista sin sitio web; se manejaba solo por Instagram y recomendaciones de boca en boca.</p>
-            </div>
-            <div class="proj-row">
-              <span class="tag tag-sol">Solución</span>
-              <p>Landing page con estética de manicurista: servicios, trabajos y reseñas reales e información de contacto.</p>
-            </div>
-          </div>
-
-          <a href="https://laravillani.github.io/nails-by-nanu" target="_blank" class="btn-site">
-            Resultado — Ver sitio
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
         </div>
       </article>
 
       <!-- Antipasto Cocina -->
-      <article class="proj-card reveal delay-3">
+      <article class="proj-item reveal delay-3">
         <div class="proj-img-wrap">
-          <img src="img/mockup-antipasto-cocina.png" alt="Captura del sitio de Antipasto Cocina" class="proj-img" />
+          <img src="img/mockup-antipasto-cocina.png" alt="Captura del sitio de Antipasto Cocina" class="proj-img">
         </div>
-
-        <div class="proj-body">
-          <div class="proj-client">
-            Antipasto Cocina
+        <div class="proj-info">
+          <div class="proj-name">Antipasto Cocina</div>
+          <div class="proj-rubro">Gastronomía</div>
+          <div class="proj-footer">
+            <span class="proj-type">Landing page</span>
+            <a href="https://laravillani.github.io/antipasto-comida" target="_blank" class="btn-site">
+              Ver sitio
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
           </div>
-
-          <div class="proj-rows">
-            <div class="proj-row">
-              <span class="tag tag-prob">Problema</span>
-              <p>Negocio gastronómico sin presencia web; las consultas y pedidos llegaban solo por redes sociales.</p>
-            </div>
-            <div class="proj-row">
-              <span class="tag tag-sol">Solución</span>
-              <p>Sitio web con identidad visual propia: menú, información del local y llamados a la acción claros para atraer más clientes.</p>
-            </div>
-          </div>
-
-          <a href="https://laravillani.github.io/antipasto-comida" target="_blank" class="btn-site">
-            Resultado — Ver sitio
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
         </div>
       </article>
 
