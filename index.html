@@ -71,6 +71,7 @@
       color: var(--text);
       line-height: 1.65;
       overflow-x: hidden;
+      transition: opacity .2s ease;
     }
 
     ::-webkit-scrollbar          { width: 5px; }
@@ -1970,7 +1971,14 @@
   }
 
   document.querySelectorAll('.lang-opt').forEach(btn => {
-    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    btn.addEventListener('click', () => {
+      if (btn.dataset.lang === currentLang) return;
+      document.body.style.opacity = '0';
+      setTimeout(() => {
+        applyLang(btn.dataset.lang);
+        document.body.style.opacity = '';
+      }, 200);
+    });
   });
 
   applyLang(currentLang);
